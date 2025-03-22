@@ -1,42 +1,16 @@
 @use 'variables' as *;
 
 header.site-header {
+    position: relative;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    background: $tan;
-    h1 {
+    h1.branding,
+    h2.branding {
         width: 20rem;
         height: 4.56rem; /* .228 */
-        margin: 1rem;
+        margin: 1rem auto;
         fill: white;
-    }
-    h2 {
-        font-family: $merriweather;
-        font-size: 1rem;
-        color: $brown;
-        text-align: right;
-        margin: 1rem;
-        max-width: 50rem;
-    }
-    nav.menu-main-menu-container {
-        ul {
-            list-style-type: none;
-            display: flex;
-            gap: 1rem;
-            li {
-                a {
-                    background: $brown;
-                    color: $tan;
-                    transition: all 1s;
-                    text-decoration: none;
-                    padding: 1rem;
-                    &:hover {
-                        background: $red;
-                    }
-                }
-            }
-        }
     }
 }
 

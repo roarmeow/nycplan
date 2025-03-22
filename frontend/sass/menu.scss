@@ -1,0 +1,30 @@
+@use 'variables' as *;
+
+nav.menu-main-menu-container {
+    padding-right: 2rem;
+    background: $red;
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+    width: 100%;
+    ul {
+        list-style-type: none;
+        display: flex;
+        li {
+            a {
+                color: $tan;
+                transition: all 1s;
+                text-decoration: none;
+                text-transform: uppercase;
+                font-weight: 700;
+                border-right: 3px solid $blue_lt;
+                padding: 0 1rem;
+                &:hover {
+                    color: white;
+                }
+            }
+            &:last-of-type a {
+                border-right: none;
+                padding-right: 0;
+            }
+        }
+    }
+}

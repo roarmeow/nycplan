@@ -1,0 +1,57 @@
+@use 'variables' as *;
+
+main {
+	margin: 0;
+	padding: 2rem 0 5rem;
+	a {
+		color: $blue_lt;
+		transition: color 0.25s;
+		&:hover {
+			color: $red;
+		}
+	}
+	section {
+		margin: 0 auto;
+		max-width: 35rem;
+	}
+	@media only screen and (max-width: 768px) {
+		padding: 2rem 1rem 5rem;
+	}
+	blockquote {
+		position: relative;
+		font-family: $merriweather;
+		font-size: 1.25rem;
+		float: right;
+		margin: 0 -15rem 1rem 2rem;
+		max-width: 30rem;
+		&::before, &::after {
+			content: '\201C';
+			font-size: 3rem;
+			position: absolute;
+			top: -1rem;
+			left: -2rem;
+		}
+		&::after {
+			content: '\201D';
+			top: auto;
+			left: auto;
+			bottom: -2rem;
+			right: -1rem;
+		}
+		@media only screen and (max-width: 768px) {
+			float: none;
+			margin: 1rem -1rem;
+			padding: 1rem 3rem;
+			background: $tan;
+			color: $red;
+			&::before {
+				top: 0.5rem;
+				left: 0.5rem;
+			}
+			&::after {
+				bottom: -1.5rem;
+				right: 0.5rem;
+			}
+		}
+	}
+}

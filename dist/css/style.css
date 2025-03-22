@@ -195,16 +195,20 @@ body, html {
   margin: 0;
   padding: 0;
   font-family: "Lato", sans-serif;
-  background: #315565;
+  background: #DFCFB4;
   color: #46330F;
   line-height: 1.4;
   text-size-adjust: 50%;
 }
 
-h2 {
+h1, h2 {
   font-family: "Merriweather", serif;
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin: 0 0 0.5rem;
+}
+
+h2 {
+  font-size: 2rem;
 }
 
 h3, h4 {
@@ -226,18 +230,61 @@ a {
   color: #315565;
 }
 
+header.site-header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+header.site-header h1.branding,
+header.site-header h2.branding {
+  width: 20rem;
+  height: 4.56rem; /* .228 */
+  margin: 1rem auto;
+  fill: white;
+}
+
+.admin-bar header.site-header .home-intro {
+  height: calc(100vh - 13.7rem);
+}
+
+nav.menu-main-menu-container {
+  padding-right: 2rem;
+  background: #6C1412;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.5);
+  width: 100%;
+}
+nav.menu-main-menu-container ul {
+  list-style-type: none;
+  display: flex;
+}
+nav.menu-main-menu-container ul li a {
+  color: #DFCFB4;
+  transition: all 1s;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 700;
+  border-right: 3px solid #3A7E9C;
+  padding: 0 1rem;
+}
+nav.menu-main-menu-container ul li a:hover {
+  color: white;
+}
+nav.menu-main-menu-container ul li:last-of-type a {
+  border-right: none;
+  padding-right: 0;
+}
+
 main {
   margin: 0;
   padding: 2rem 0 5rem;
-  background: #6C1412;
-  color: #DFCFB4;
 }
 main a {
-  color: white;
+  color: #3A7E9C;
   transition: color 0.25s;
 }
 main a:hover {
-  color: #DFCFB4;
+  color: #6C1412;
 }
 main section {
   margin: 0 auto;
@@ -270,58 +317,35 @@ main blockquote::after {
   bottom: -2rem;
   right: -1rem;
 }
-
-header.site-header {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  background: #DFCFB4;
-}
-header.site-header h1 {
-  width: 20rem;
-  height: 4.56rem; /* .228 */
-  margin: 1rem;
-  fill: white;
-}
-header.site-header h2 {
-  font-family: "Merriweather", serif;
-  font-size: 1rem;
-  color: #46330F;
-  text-align: right;
-  margin: 1rem;
-  max-width: 50rem;
-}
-header.site-header nav.menu-main-menu-container ul {
-  list-style-type: none;
-  display: flex;
-  gap: 1rem;
-}
-header.site-header nav.menu-main-menu-container ul li a {
-  background: #46330F;
-  color: #DFCFB4;
-  transition: all 1s;
-  text-decoration: none;
-  padding: 1rem;
-}
-header.site-header nav.menu-main-menu-container ul li a:hover {
-  background: #6C1412;
-}
-
-.admin-bar header.site-header .home-intro {
-  height: calc(100vh - 13.7rem);
+@media only screen and (max-width: 768px) {
+  main blockquote {
+    float: none;
+    margin: 1rem -1rem;
+    padding: 1rem 3rem;
+    background: #DFCFB4;
+    color: #6C1412;
+  }
+  main blockquote::before {
+    top: 0.5rem;
+    left: 0.5rem;
+  }
+  main blockquote::after {
+    bottom: -1.5rem;
+    right: 0.5rem;
+  }
 }
 
 footer {
   font-size: 0.875rem;
   text-align: center;
   padding: 0 1rem;
+  background: #315565;
   color: #DFCFB4;
-  width: 100vw;
 }
 footer p {
   margin: 0;
-  height: 2rem;
-  line-height: 2rem;
+  height: 3rem;
+  line-height: 3rem;
 }
 
 /*# sourceMappingURL=style.css.map */
