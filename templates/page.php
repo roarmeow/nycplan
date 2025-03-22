@@ -1,5 +1,7 @@
 <main>
-    <?php
-    the_content();
-    ?>
+    <section>
+        <?php
+        the_content();
+        ?>
+    </section>
 </main>
