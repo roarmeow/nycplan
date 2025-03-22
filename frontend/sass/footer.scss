@@ -1,0 +1,17 @@
+@use 'variables' as *;
+
+footer {
+	font-size: 0.875rem;
+	text-align: center;
+	padding: 0 1rem;
+	background: $blue;
+	color: $tan;
+	position: fixed;
+	bottom: 0;
+	width: 100vw;
+	p {
+		margin: 0;
+		height: 2rem;
+		line-height: 2rem;
+	}
+}

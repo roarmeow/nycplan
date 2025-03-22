@@ -1,0 +1,17 @@
+{
+  "name": "nycplan-fe",
+  "version": "1.0.0",
+  "description": "NYC PLAN front-end build",
+  "main": "index.js",
+  "scripts": {
+    "test": "test",
+    "dev": "sass --watch --update --style=expanded sass/style.scss ../dist/css/style.css",
+    "build": "sass --no-source-map --style=compressed sass/style.scss ../dist/css/style.css.min"
+  },
+  "author": "Michael Kranz",
+  "license": "GPL-3.0-or-later",
+  "devDependencies": {
+    "concat": "^1.0.3",
+    "sass": "^1.86.0"
+  }
+}

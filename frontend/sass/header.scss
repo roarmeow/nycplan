@@ -1,0 +1,29 @@
+@use 'variables' as *;
+
+header.site-header {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	h1 {
+		width: 20rem;
+		height: 4.56rem; /* .228 */
+		margin: 1rem;
+		fill: white;
+	}
+	h2 {
+		font-family: $merriweather;
+		font-size: 1rem;
+		color: $brown;
+		text-align: right;
+		margin: 1rem;
+		max-width: 50rem;
+	}
+}
+
+.admin-bar {
+	header.site-header {
+		.home-intro {
+			height: calc(100vh - 13.7rem)
+		}
+	}
+}
