@@ -1,30 +1,49 @@
 @use 'variables' as *;
 
 header.site-header {
-	display: flex;
-	justify-content: space-between;
-	flex-wrap: wrap;
-	background: $tan;
-	h1 {
-		width: 20rem;
-		height: 4.56rem; /* .228 */
-		margin: 1rem;
-		fill: white;
-	}
-	h2 {
-		font-family: $merriweather;
-		font-size: 1rem;
-		color: $brown;
-		text-align: right;
-		margin: 1rem;
-		max-width: 50rem;
-	}
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    background: $tan;
+    h1 {
+        width: 20rem;
+        height: 4.56rem; /* .228 */
+        margin: 1rem;
+        fill: white;
+    }
+    h2 {
+        font-family: $merriweather;
+        font-size: 1rem;
+        color: $brown;
+        text-align: right;
+        margin: 1rem;
+        max-width: 50rem;
+    }
+    nav.menu-main-menu-container {
+        ul {
+            list-style-type: none;
+            display: flex;
+            gap: 1rem;
+            li {
+                a {
+                    background: $brown;
+                    color: $tan;
+                    transition: all 1s;
+                    text-decoration: none;
+                    padding: 1rem;
+                    &:hover {
+                        background: $red;
+                    }
+                }
+            }
+        }
+    }
 }
 
 .admin-bar {
-	header.site-header {
-		.home-intro {
-			height: calc(100vh - 13.7rem)
-		}
-	}
+    header.site-header {
+        .home-intro {
+            height: calc(100vh - 13.7rem)
+        }
+    }
 }

@@ -16,14 +16,23 @@ h2 {
 	margin: 0 0 0.5rem;
 }
 
-h3 {
+h3, h4 {
 	font-family: $lato;
 	font-size: 1.25rem;
 	margin: 0 0 0.5rem;
+	text-transform: uppercase;
+}
+
+h4 {
+	text-transform: none;
 }
 
 p {
 	margin: 0 0 1rem;
+}
+
+a {
+	color: $blue;
 }
 
 main {
@@ -31,12 +40,41 @@ main {
 	padding: 2rem 0 5rem;
 	background: $red;
 	color: $tan;
+	a {
+		color: white;
+		transition: color 0.25s;
+		&:hover {
+			color: $tan;
+		}
+	}
 	section {
 		margin: 0 auto;
 		max-width: 35rem;
 	}
 	@media only screen and (max-width: 768px) {
 		padding: 2rem 1rem 5rem;
+	}
+	blockquote {
+		position: relative;
+		font-family: $merriweather;
+		font-size: 1.25rem;
+		float: right;
+		margin: 0 -15rem 1rem 2rem;
+		max-width: 30rem;
+		&::before, &::after {
+			content: '\201C';
+			font-size: 3rem;
+			position: absolute;
+			top: -1rem;
+			left: -2rem;
+		}
+		&::after {
+			content: '\201D';
+			top: auto;
+			left: auto;
+			bottom: -2rem;
+			right: -1rem;
+		}
 	}
 }
 
