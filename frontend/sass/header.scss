@@ -7,10 +7,14 @@ header.site-header {
     flex-wrap: wrap;
     h1.branding,
     h2.branding {
-        width: 20rem;
-        height: 4.56rem; /* .228 */
-        margin: 1rem auto;
+        margin: 1rem;
+        width: 70%;
         fill: white;
+        @media only screen and (min-width: 768px) {
+            width: 20rem;
+            height: 4.56rem; /* .228 */
+            margin: 1rem auto;
+        }
     }
 }
 
