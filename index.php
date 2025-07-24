@@ -17,7 +17,7 @@
         get_template_part('partials/header');
         if (is_page()) {
             get_template_part('templates/page');
-        } elseif (is_archive()) {
+        } elseif (is_home() || is_archive() || is_page('archives')) {
             get_template_part('templates/archive');
         } elseif (is_single()) {
             get_template_part('templates/single');

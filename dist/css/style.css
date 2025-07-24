@@ -210,6 +210,9 @@ h1, h2 {
 h2 {
   font-size: 2rem;
 }
+h2 a {
+  text-decoration: none;
+}
 
 h3, h4 {
   font-family: "Lato", sans-serif;
@@ -220,6 +223,18 @@ h3, h4 {
 
 h4 {
   text-transform: none;
+}
+
+time {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: #6C1412;
+  margin: 0 0 1rem;
+}
+h2 + time {
+  margin-top: -0.875rem;
 }
 
 p {
