@@ -10,9 +10,9 @@ main {
 			color: $red;
 		}
 	}
-	section {
-		margin: 0 auto;
+	article.body-content {
 		max-width: 35rem;
+		margin: 0 auto;
 	}
 	@media only screen and (max-width: 768px) {
 		padding: 2rem 1rem 5rem;
@@ -54,4 +54,9 @@ main {
 			}
 		}
 	}
+}
+
+section {
+	margin: 0 auto;
+	max-width: 72rem;
 }

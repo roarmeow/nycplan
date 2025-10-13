@@ -1,8 +1,21 @@
 $brown: #46330F;
+$lt_brown: #C0B093;
 $tan: #DFCFB4;
+$med_tan: #E5D9C3;
+$lt_tan: #ECE2D2;
 $red: #6C1412;
 $blue_lt: #3A7E9C;
 $blue: #315565;
 
 $lato: 'Lato', sans-serif;
 $merriweather: 'Merriweather', serif;
+
+$sm: 40rem;
+$md: 48rem;
+$lg: 64rem;
+
+@mixin media-min($breakpoint) {
+    @media only screen and (min-width: $breakpoint) {
+        @content;
+    }
+}

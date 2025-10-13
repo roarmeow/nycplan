@@ -244,6 +244,14 @@ p {
 a {
   color: #315565;
 }
+a.wp-block-button__link {
+  background: #46330F;
+  color: #DFCFB4;
+}
+a.wp-block-button__link:hover {
+  background: #6C1412;
+  color: #DFCFB4;
+}
 
 header.site-header {
   position: relative;
@@ -393,9 +401,9 @@ main a {
 main a:hover {
   color: #6C1412;
 }
-main section {
-  margin: 0 auto;
+main article.body-content {
   max-width: 35rem;
+  margin: 0 auto;
 }
 @media only screen and (max-width: 768px) {
   main {
@@ -440,6 +448,69 @@ main blockquote::after {
     bottom: -1.5rem;
     right: 0.5rem;
   }
+}
+
+section {
+  margin: 0 auto;
+  max-width: 72rem;
+}
+
+.article-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(22rem, 1fr));
+  gap: 2rem;
+}
+
+article.card {
+  background: #ECE2D2;
+  padding: 2rem;
+  border-radius: 0.3rem;
+  box-shadow: 0 0 1rem #C0B093;
+}
+
+@media only screen and (min-width: 64rem) {
+  section.scorecard-list {
+    margin: 0 -14rem;
+  }
+}
+
+div.scorecard-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas: "sc-header sc-header sc-header sc-pic" "sc-status sc-notes sc-notes sc-notes";
+  gap: 1rem;
+  margin: 0 0 1rem;
+  padding: 1rem 1rem 0;
+  border-radius: 0.3rem;
+}
+@media only screen and (min-width: 48rem) {
+  div.scorecard-card {
+    grid-template-columns: 3fr 1fr 1fr 6fr;
+  }
+}
+div.scorecard-card h3 {
+  grid-area: sc-header;
+  text-transform: none;
+}
+div.scorecard-card img {
+  grid-area: sc-pic;
+  max-width: 100%;
+  height: auto;
+}
+div.scorecard-card p.status {
+  grid-area: sc-status;
+}
+div.scorecard-card div.notes {
+  grid-area: sc-notes;
+}
+@media only screen and (min-width: 48rem) {
+  div.scorecard-card h3, div.scorecard-card img, div.scorecard-card p.status, div.scorecard-card div.notes {
+    grid-area: auto;
+  }
+}
+div.scorecard-card:nth-child(even) {
+  background: #E5D9C3;
 }
 
 footer {

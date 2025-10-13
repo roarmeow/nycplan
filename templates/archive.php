@@ -6,17 +6,19 @@ $wp_query->query('showposts=-1');
         <h1>News &amp; Updates</h1>
         <?php
         if (have_posts()) :
-            while (have_posts()) : the_post();
-            ?>
-            <h2>
-                <a href="<?php the_permalink(); ?>">
-                    <?php the_title(); ?>
-                </a>
-            </h2>
-            <time><?php the_date(); ?></time>
-            <p><?php the_excerpt(); ?></p>
-            <?php
-            endwhile;
+        ?>
+            <div class="article-list">
+                <?php
+                while (have_posts()) : the_post();
+                    get_template_part('partials/article-card', '', $post);
+                endwhile;
+                ?>
+            </div>
+        <?php
+        else :
+        ?>
+            <p>These aren&rsquo;t the droids you&rsquo;re looking for.</p>
+        <?php
         endif;
         the_posts_pagination();
         ?>

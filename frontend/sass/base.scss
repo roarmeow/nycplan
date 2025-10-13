@@ -52,6 +52,15 @@ p {
 
 a {
 	color: $blue;
+	&.wp-block-button__link {
+		background: $brown;
+		color: $tan;
+		&:hover {
+			background: $red;
+			color: $tan;
+		}
+	}
 }
+
 
 // linear-gradient(0deg, rgb(70, 51, 15) 0%, rgb(223, 207, 180) 33%)
