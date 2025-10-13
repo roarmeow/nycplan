@@ -478,7 +478,7 @@ div.scorecard-card {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-template-rows: auto;
-  grid-template-areas: "sc-header sc-header sc-header sc-pic" "sc-status sc-notes sc-notes sc-notes";
+  grid-template-areas: "sc-header sc-header sc-header sc-pic" "sc-stance sc-notes sc-notes sc-notes";
   gap: 1rem;
   margin: 0 0 1rem;
   padding: 1rem 1rem 0;
@@ -486,7 +486,7 @@ div.scorecard-card {
 }
 @media only screen and (min-width: 48rem) {
   div.scorecard-card {
-    grid-template-columns: 3fr 1fr 1fr 6fr;
+    grid-template-columns: 3fr 1fr 2fr 6fr;
   }
 }
 div.scorecard-card h3 {
@@ -498,14 +498,25 @@ div.scorecard-card img {
   max-width: 100%;
   height: auto;
 }
-div.scorecard-card p.status {
-  grid-area: sc-status;
+div.scorecard-card p.stance {
+  grid-area: sc-stance;
+  margin: 0;
+  border-radius: 0.3rem;
+  padding: 1rem;
+  color: white;
+  background: #C0B093;
+}
+div.scorecard-card p.stance.supports {
+  background: #7C9EA6;
+}
+div.scorecard-card p.stance.opposes {
+  background: #9A5F53;
 }
 div.scorecard-card div.notes {
   grid-area: sc-notes;
 }
 @media only screen and (min-width: 48rem) {
-  div.scorecard-card h3, div.scorecard-card img, div.scorecard-card p.status, div.scorecard-card div.notes {
+  div.scorecard-card h3, div.scorecard-card img, div.scorecard-card p.stance, div.scorecard-card div.notes {
     grid-area: auto;
   }
 }

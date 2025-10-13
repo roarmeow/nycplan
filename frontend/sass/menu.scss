@@ -69,7 +69,7 @@ nav.menu-main-menu-container {
                 text-decoration: none;
                 text-transform: uppercase;
                 font-weight: 700;
-                border-bottom: 3px solid $blue_lt;
+                border-bottom: 3px solid $slate;
                 padding: 0 0 0.5rem;
                 margin: 0 0 0.5rem;
                 &:hover {
@@ -101,7 +101,7 @@ nav.menu-main-menu-container {
             padding: none;
             li {
                 a {
-                    border-right: 3px solid $blue_lt;
+                    border-right: 3px solid $slate;
                     border-bottom: none;
                     padding: 0 1rem;
                 }

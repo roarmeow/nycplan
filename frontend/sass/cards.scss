@@ -7,10 +7,10 @@
 }
 
 article.card {
-    background: $lt_tan;
+    background: $tan_lt;
     padding: 2rem;
     border-radius: 0.3rem;
-    box-shadow: 0 0 1rem $lt_brown;
+    box-shadow: 0 0 1rem $brown_lt;
 }
 
 section.scorecard-list {
@@ -25,13 +25,13 @@ div.scorecard-card {
     grid-template-rows: auto;
     grid-template-areas:
         'sc-header sc-header sc-header sc-pic'
-        'sc-status sc-notes sc-notes sc-notes';
+        'sc-stance sc-notes sc-notes sc-notes';
     gap: 1rem;
     margin: 0 0 1rem;
     padding: 1rem 1rem 0;
     border-radius: 0.3rem;
     @include media-min($md) {
-        grid-template-columns: 3fr 1fr 1fr 6fr;
+        grid-template-columns: 3fr 1fr 2fr 6fr;
     }
     h3 {
         grid-area: sc-header;
@@ -42,18 +42,29 @@ div.scorecard-card {
         max-width: 100%;
         height: auto;
     }
-    p.status {
-        grid-area: sc-status;
+    p.stance {
+        grid-area: sc-stance;
+        margin: 0;
+        border-radius: 0.3rem;
+        padding: 1rem;
+        color: white;
+        background: $brown_lt;
+        &.supports {
+            background: $slate_lt;
+        }
+        &.opposes {
+            background: $red_lt;
+        }
     }
     div.notes {
         grid-area: sc-notes;
     }
-    h3, img, p.status, div.notes {
+    h3, img, p.stance, div.notes {
         @include media-min($md) {
             grid-area: auto;
         }
     }
     &:nth-child(even) {
-        background: $med_tan;
+        background: $tan_med;
     }
 }

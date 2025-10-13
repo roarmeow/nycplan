@@ -20,7 +20,8 @@ $candidates = get_field('candidates') ?? null;
                     $card_args = array(
                         'name' => $candidate['name'],
                         'photo' => $candidate['photo'],
-                        'stance' => $candidate['stance'],
+                        'stance_value' => $candidate['stance']['value'],
+                        'stance_label' => $candidate['stance']['label'],
                         'notes' => $candidate['notes']
                     );
                     get_template_part('partials/scorecard-card', 'scorecard-card', $card_args);
