@@ -461,11 +461,20 @@ section {
   gap: 2rem;
 }
 
-article.card {
-  background: #ECE2D2;
-  padding: 2rem;
+article.card a {
   border-radius: 0.3rem;
   box-shadow: 0 0 1rem #C0B093;
+  display: block;
+  background: #ECE2D2;
+  padding: 2rem;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+article.card a:hover {
+  background: #F2ECE1;
+}
+article.card a p {
+  color: #46330F;
 }
 
 @media only screen and (min-width: 64rem) {

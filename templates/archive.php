@@ -1,9 +1,15 @@
 <?php
-$wp_query->query('showposts=-1');
+$post_type = get_post_type();
+if ($post_type === 'post') {
+    $title = 'News &amp; Updates';
+} elseif ($post_type === 'action') {
+    $title = 'Take Action!';
+}
+$wp_query->set('posts_per_page', 3);
 ?>
 <main>
     <section>
-        <h1>News &amp; Updates</h1>
+        <h1><?php echo $title; ?></h1>
         <?php
         if (have_posts()) :
         ?>

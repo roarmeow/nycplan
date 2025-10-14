@@ -1,5 +1,5 @@
 <main>
-    <section>
+    <article class="body-content">
         <h1>
             <?php
             the_title();
@@ -8,5 +8,5 @@
         <?php
         the_content();
         ?>
-    </section>
+    </article>
 </main>

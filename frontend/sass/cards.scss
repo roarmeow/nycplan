@@ -7,10 +7,21 @@
 }
 
 article.card {
-    background: $tan_lt;
-    padding: 2rem;
-    border-radius: 0.3rem;
-    box-shadow: 0 0 1rem $brown_lt;
+    a {
+        border-radius: 0.3rem;
+        box-shadow: 0 0 1rem $brown_lt;
+        display: block;
+        background: $tan_lt;
+        padding: 2rem;
+        text-decoration: none;
+        transition: all 0.5s;
+        &:hover {
+            background: $tan_lter;
+        }
+        p {
+            color: $brown;
+        }
+    }
 }
 
 section.scorecard-list {
