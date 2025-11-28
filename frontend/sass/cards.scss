@@ -24,7 +24,14 @@ article.card {
     }
 }
 
-section.scorecard-list {
+section.filters {
+    background: $brown_lt;
+    padding: 0.5rem;
+    border-radius: 0.3rem 0.3rem 0 0;
+}
+
+section.scorecard-list,
+section.filters {
     @include media-min($lg) {
         margin: 0 -14rem;
     }
@@ -77,5 +84,8 @@ div.scorecard-card {
     }
     &:nth-child(even) {
         background: $tan_med;
+    }
+    &:first-of-type {
+        border-radius: 0 0 0.3rem 0.3rem;
     }
 }

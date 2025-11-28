@@ -477,8 +477,15 @@ article.card a p {
   color: #46330F;
 }
 
+section.filters {
+  background: #C0B093;
+  padding: 0.5rem;
+  border-radius: 0.3rem 0.3rem 0 0;
+}
+
 @media only screen and (min-width: 64rem) {
-  section.scorecard-list {
+  section.scorecard-list,
+  section.filters {
     margin: 0 -14rem;
   }
 }
@@ -531,6 +538,9 @@ div.scorecard-card div.notes {
 }
 div.scorecard-card:nth-child(even) {
   background: #E5D9C3;
+}
+div.scorecard-card:first-of-type {
+  border-radius: 0 0 0.3rem 0.3rem;
 }
 
 footer {

@@ -1,6 +1,25 @@
 <?php
-$intro = get_field('intro') ?? '';
+$intro      = get_field('intro') ?? '';
 $candidates = get_field('candidates') ?? null;
+$sortby     = $_GET['sortby'] ?? null;
+
+if ( isset($sortby) ) {
+    // echo '<pre>';
+    // var_dump($candidates);
+    // echo '</pre>';
+    switch ($sortby) {
+        case 'stance-pos':
+            var_dump(nycp_sort_by($candidates[0], $candidates[1], 'stance'));
+            break;
+        case 'stance-neg':
+            break;
+        case 'name-asc':
+            break;
+        case 'name-desc':
+            break;
+    }
+}
+
 ?>
 <main>
     <article class="body-content">
@@ -14,6 +33,17 @@ $candidates = get_field('candidates') ?? null;
 
         if ($candidates) {
             ?>
+            <section class="filters">
+                <div>Sort by:
+                    <select name="sortby" data-behavior="sortby">
+                        <option value="stance-pos">Stance (Positive)</option>
+                        <option value="stance-neg">Stance (Negative)</option>
+                        <option value="name-asc">Last Name A-Z</option>
+                        <option value="name-desc">Last Name Z-A</option>
+                    </select>
+                </div>
+            </section>
+
             <section class="scorecard-list">
                 <?php
                 foreach($candidates as $candidate) {
