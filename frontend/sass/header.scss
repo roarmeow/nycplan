@@ -8,7 +8,7 @@ header.site-header {
     flex-wrap: wrap;
     h1.branding,
     h2.branding {
-        margin: 1rem;
+        margin: 1rem 1rem 0;
         width: 70%;
         fill: white;
         @media only screen and (min-width: 768px) {
@@ -21,6 +21,11 @@ header.site-header {
         list-style-type: none;
         margin: 0;
         padding: 0;
+        @media only screen and (max-width: 768px) {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
         a {
             height: 2rem;
             width: 2rem;

@@ -1,6 +1,6 @@
 {
   "name": "nycplan-fe",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "NYC PLAN front-end build",
   "main": "index.js",
   "scripts": {
