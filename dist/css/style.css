@@ -256,7 +256,8 @@ a.wp-block-button__link:hover {
 header.site-header {
   position: relative;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
+  align-items: center;
   flex-wrap: wrap;
 }
 header.site-header h1.branding,
@@ -270,10 +271,23 @@ header.site-header h2.branding {
   header.site-header h2.branding {
     width: 20rem;
     height: 4.56rem; /* .228 */
-    margin: 1rem auto;
+    margin: 1rem;
   }
 }
-
+header.site-header ul.social-links {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+header.site-header ul.social-links a {
+  height: 2rem;
+  width: 2rem;
+  padding: 0.25rem 0 0.25rem 1rem;
+  display: block;
+}
+header.site-header ul.social-links a svg path {
+  fill: #46330F;
+}
 .admin-bar header.site-header .home-intro {
   height: calc(100vh - 13.7rem);
 }

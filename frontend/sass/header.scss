@@ -3,7 +3,8 @@
 header.site-header {
     position: relative;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     h1.branding,
     h2.branding {
@@ -13,7 +14,27 @@ header.site-header {
         @media only screen and (min-width: 768px) {
             width: 20rem;
             height: 4.56rem; /* .228 */
-            margin: 1rem auto;
+            margin: 1rem;
+        }
+    }
+    ul.social-links {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        a {
+            height: 2rem;
+            width: 2rem;
+            padding: 0.25rem 0 0.25rem 1rem;
+            display: block;
+            svg path {
+                fill: $brown;
+            }
+        }
+        a.bluesky {
+
+        }
+        a.instagram {
+
         }
     }
 }
